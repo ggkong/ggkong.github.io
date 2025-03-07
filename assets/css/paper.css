@@ -5,6 +5,21 @@
     box-sizing: border-box;
 }
 
+.tab-content { display: none;}
+.active { display: block; }
+
+.custom-link {
+    color: #4f4f4f; /* 默认灰色字体 */
+    text-decoration: underline; /* 默认下划线 */
+    text-decoration-color: #ddd; /* 非常淡的下划线 */
+    transition: color 0.3s, text-decoration-color 0.3s; /* 平滑过渡 */
+  }
+
+.custom-link:hover {
+    color: black; /* 鼠标划过时颜色加深 */
+    text-decoration-color: #4f4f4f; /* 鼠标划过时下划线加深 */
+  }
+
 .paper-box {
     display: flex;
     justify-content: flex-start;
