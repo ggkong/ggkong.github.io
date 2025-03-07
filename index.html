@@ -46,6 +46,24 @@
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <!-- end custom head snippets -->
 		
+		
+		<style>
+		    .tab-content { display: none;}
+		    .active { display: block; }
+			
+			.custom-link {
+			    color: #4f4f4f; /* 默认灰色字体 */
+			    text-decoration: underline; /* 默认下划线 */
+			    text-decoration-color: #ddd; /* 非常淡的下划线 */
+			    transition: color 0.3s, text-decoration-color 0.3s; /* 平滑过渡 */
+			  }
+			
+			.custom-link:hover {
+			    color: black; /* 鼠标划过时颜色加深 */
+			    text-decoration-color: #4f4f4f; /* 鼠标划过时下划线加深 */
+			  }
+		</style>
+		
 		<script>
 		    function showTab(tabId) {
 		        let tabs = document.querySelectorAll('.tab-content');
@@ -54,9 +72,10 @@
 		    }
 		</script>
 		
+		
     </head>
     <body>
-        <!--[if lt IE 9]><div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+		<!-- 面包屑 -->
         <div class="masthead">
             <div class="masthead__inner-wrap">
                 <div class="masthead__menu">
@@ -91,6 +110,8 @@
                 </div>
             </div>
         </div>
+		
+		<!-- 左侧栏 -->
         <div id="main" role="main">
             <div class="sidebar sticky">
                 <div itemscope itemtype="http://schema.org/Person">
@@ -154,11 +175,16 @@
                                 </a>
                             </li> -->
                         </ul>
+						
+						<div style="width: 50%; margin: 2rem 1rem;">
+							<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=2OYChXdS7zSOTZGbT3EbckUNC5Qj5-lSHfIEcyN_Ooo"></script>
+						</div>
                     </div>
                 </div>
             </div>
             
-			
+			<!-- 右侧切换区域 -->
+			<!-- 个人介绍 -->
 			<article id="aboutme" class="page tab-content active" >
 			    <div class="page__inner-wrap">
 			        <header>
@@ -168,19 +194,20 @@
 						<p>Stay humble, stay hungry, keep learning.</p>
 						
 						<p>I look forward to becoming friends with you! 😊</p>
+						
 					</header>
 			        <footer class="page__meta">
 					</footer>
 			    </div>
 			</article>
 			
-			
+			<!-- 最近消息 -->
 			<article id="news" class="page tab-content">
 			    <div class="page__inner-wrap">
 			        <header>
 					<h1 id="-news" style="font-size: 2.4rem;">🔊 News</h1>
 					<ul>
-					  <li>[01/2025] ️🔖 "Retrieval-Augmented Dialogue Knowledge Aggregation for expressive conversational speech synthesis" accepted by Information Fusion 2024. 🐍</li>
+					  <li>[01/2025] ️🔖 "Retrieval-Augmented Dialogue Knowledge Aggregation for expressive conversational speech synthesis" accepted by Information Fusion 2025. 🐍</li>
 					  <li>[12/2024] 🔖 "Intra- and Inter-modal Context Interaction Modeling for Conversational Speech Synthesis" accepted by ICASSP 2025. 🐉</li>
 					  <li>[08/2024] 🎉 Congrats to Zhao Yuan! One paper accepted by NCMMSC 2024. 🐉</li>
 					  <li>[05/2024] 🧩 Built the website for IALP 2024 conference.. 🐉</li>
@@ -193,12 +220,16 @@
 			</article>
 			
 			
-			
+			<!-- 论文发表 -->
 			<article id="pubs" class="page tab-content" >
 			    <div class="page__inner-wrap">
 			        <header>
+						<!-- 会议论文 -->
 						<h1 id="-pubs" style="font-size: 2.4rem;">🎙️ Conference Papers</h1>
+						
+						<!-- paper 分割线 -->
 						<div class="paper-box"><div class="paper-box-image"><div><div class="badge">ICASSP 2025</div><img src="images/papers/Conference/IIICSS.png" alt="sym" width="100%" /></div></div>
+						
 						<div class="paper-box-text">
 						    <p>
 								<a href="https://arxiv.org/abs/2412.18733" class="custom-link">Intra- and Inter-modal Context Interaction Modeling for Conversational Speech Synthesis</a><br />
@@ -206,18 +237,30 @@
 							</p>
 						  </div>
 						</div>
+						<!-- paper 分割线 -->
 						
-						<hr />
 						
-						
+						<!-- 期刊论文 -->
 						<h2 id="-pubs" style="font-size: 2.4rem;">📚 Journal Papers</h1>
+						
+						<!-- paper 分割线 -->
+						<div class="paper-box"><div class="paper-box-image"><div><div class="badge">INFFUS 2025</div><img src="images/papers/Journal/RADKACSS.png" alt="sym" width="100%" /></div></div>
+						<div class="paper-box-text">
+						    <p>
+								<a href="https://arxiv.org/pdf/2501.06467" class="custom-link">Retrieval-Augmented Dialogue Knowledge Aggregation for expressive conversational speech synthesis</a><br />
+								Rui Liu, <b>Zhenqi Jia</b>, Feilong Bao, Haizhou Li
+							</p>
+						  </div>
+						</div>
+						<!-- paper 分割线 -->
+						
 						
 			        </header>
 			        <footer class="page__meta"></footer>
 			    </div>
 			</article>
 			
-			
+			<!-- 服务项 -->
 			<article id="services" class="page tab-content" >
 			    <div class="page__inner-wrap">
 			        <header>
@@ -251,6 +294,12 @@
                         </li>
                     </ul>
                 </div>
+				<div class="page__footer-copyright">
+				    &copy;2025 Zhenqi Jia, Published with GitHub Pages, powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>
+				    &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>
+				    , a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+					</br>Inspired by <a href="https://ttslr.github.io/" class="custom-link">[1]</a>, <a href="https://jiaxin-ye.github.io//" class="custom-link">[2]</a>.
+				</div>
             </footer>
         </div>
         <script src="https://Coder-jzq.github.io/assets/js/main.min.js"></script>
