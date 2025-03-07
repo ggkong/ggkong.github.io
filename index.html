@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <!-- begin SEO -->
-        <title>coder-jzq</title>
+        <title>🤖 coder-jzq</title>
         <meta property="og:locale" content="en-US">
 		<meta property="og:locale:alternate" content="zh-CN">
         <meta property="og:site_name" content="coder-jzq">
@@ -40,10 +40,26 @@
         <link rel="icon" href="/images/favicon.ico"/>
         <meta name="theme-color" content="#ffffff"/>
         <link rel="stylesheet" href="https://Coder-jzq.github.io/assets/css/academicons.css"/>
+		<link rel="stylesheet" href="https://Coder-jzq.github.io/assets/css/paper.css">
         <!-- Support for MatJax -->
         <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <!-- end custom head snippets -->
+		
+		
+		<style>
+		    .tab-content { display: none;}
+		    .active { display: block; }
+		</style>
+		
+		<script>
+		    function showTab(tabId) {
+		        let tabs = document.querySelectorAll('.tab-content');
+		        tabs.forEach(tab => tab.classList.remove('active'));
+		        document.getElementById(tabId).classList.add('active');
+		    }
+		</script>
+		
     </head>
     <body>
         <!--[if lt IE 9]><div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
@@ -58,15 +74,22 @@
                             <li class="masthead__menu-item masthead__menu-item--lg">
                                 <a href="https://Coder-jzq.github.io/">Zhenqi Jia (IMU)</a>
                             </li>
+							
 							<li class="masthead__menu-item">
-							    <a href="https://Coder-jzq.github.io/teaching/">News</a>
+							    <a href="javascript:void(0);" onclick="showTab('aboutme')">About me</a>
 							</li>
+							
 							<li class="masthead__menu-item">
-							    <a href="https://Coder-jzq.github.io/talks/">Publications</a>
+							    <a href="javascript:void(0);" onclick="showTab('news')">News</a>
 							</li>
-                            <li class="masthead__menu-item">
-                                <a href="https://Coder-jzq.github.io/publications/">About me</a>
-                            </li>
+							
+							<li class="masthead__menu-item">
+							    <a href="javascript:void(0);" onclick="showTab('pubs')">Publications</a>
+							</li>
+                            
+							<li class="masthead__menu-item">
+							    <a href="javascript:void(0);" onclick="showTab('services')">Services</a>
+							</li>
                             
                         </ul>
                         <ul class="hidden-links hidden"></ul>
@@ -78,7 +101,7 @@
             <div class="sidebar sticky">
                 <div itemscope itemtype="http://schema.org/Person">
                     <div class="author__avatar">
-                        <img src="https://Coder-jzq.github.io/images/profile.png" class="author__avatar" alt="77777&&">
+                        <img src="https://Coder-jzq.github.io/images/info/profile.jpg" class="author__avatar" alt="seven">
                     </div>
                     <div class="author__content">
                         <h3 class="author__name">Zhenqi Jia (贾真琦)</h3>
@@ -95,33 +118,33 @@
                             </li>
                             <li class="author__desktop">
                                 <i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>
-                                Red Brick University
+                                Inner Mongolia University
                             </li>
                             <li>
-                                <a href="mailto:none@example.org">
+                                <a href="jiazhenqi7@163.com">
                                     <i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>
                                     Email
                                 </a>
                             </li>
                             <!-- Font Awesome and Academicons icons / Academic websites -->
                             <li>
-                                <a href="https://scholar.google.com/citations?user=PS_CX0AAAAAJ">
+                                <a href="https://scholar.google.com.hk/citations?user=X1YblP0AAAAJ&hl=zh-CN">
                                     <i class="ai ai-google-scholar icon-pad-right"></i>
                                     Google Scholar
                                 </a>
                             </li>
-                            <li>
+                           <!-- <li>
                                 <a href="http://orcid.org/yourorcidurl">
                                     <i class="ai ai-orcid ai-fw icon-pad-right"></i>
                                     ORCID
                                 </a>
-                            </li>
-                            <li>
+                            </li> -->
+                            <!-- <li>
                                 <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow">
                                     <i class="ai ai-pubmed ai-fw icon-pad-right"></i>
                                     PubMed
                                 </a>
-                            </li>
+                            </li> -->
                             <!-- Font Awesome icons / Repositories and software development -->
                             <li>
                                 <a href="https://github.com/Coder-jzq">
@@ -130,25 +153,91 @@
                                 </a>
                             </li>
                             <!-- Font Awesome icons / Social media -->
-                            <li>
+                            <!-- <li>
                                 <a href="https://bsky.app/profile/bsky.app">
                                     <i class="fab fa-fw fa-bluesky icon-pad-right" aria-hidden="true"></i>
                                     Bluesky
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
             </div>
-            <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-                <meta itemprop="headline" content="Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites">
-                <div class="page__inner-wrap">
-                    <header>
-                        <h1 class="page__title" itemprop="headline">xxxx</h1>
-                    </header>
-                    <footer class="page__meta"></footer>
-                </div>
-            </article>
+            
+			
+			<article id="aboutme" class="page tab-content active" >
+			    <div class="page__inner-wrap">
+			        <header>
+						<h1 id="-about-me" style="font-size: 2.4rem;">👨🏻‍💻 About Me</h1>
+						<p>Hi! I am <b>Zhenqi Jia (<a href="https://Coder-jzq.github.io/"  style="text-decoration: none; color: #4f4f4f ;">贾真琦</a>).</b> My advisor is <a href="https://ttslr.github.io/index_ruiliu.html" style="text-decoration: none;">Prof. Rui Liu.</a></p> 
+						
+						<p>Stay humble, stay hungry, keep learning.</p>
+						
+						<p>I look forward to becoming friends with you! 😊</p>
+					</header>
+			        <footer class="page__meta">
+					</footer>
+			    </div>
+			</article>
+			
+			
+			<article id="news" class="page tab-content">
+			    <div class="page__inner-wrap">
+			        <header>
+					<h1 id="-news" style="font-size: 2.4rem;">🔊 News</h1>
+					<ul>
+					  <li>[01/2025] ️🔖 "Retrieval-Augmented Dialogue Knowledge Aggregation for expressive conversational speech synthesis" accepted by Information Fusion 2024. 🐍</li>
+					  <li>[12/2024] 🔖 "Intra- and Inter-modal Context Interaction Modeling for Conversational Speech Synthesis" accepted by ICASSP 2025. 🐉</li>
+					  <li>[08/2024] 🎉 Congrats to Zhao Yuan! One paper accepted by NCMMSC 2024. 🐉</li>
+					  <li>[05/2024] 🧩 Built the website for IALP 2024 conference.. 🐉</li>
+					  <li>[begin] 🤓 ️Everything started from here~️ 🚀</li>
+					  
+					</ul>
+			        </header>
+			        <footer class="page__meta"></footer>
+			    </div>
+			</article>
+			
+			
+			
+			<article id="pubs" class="page tab-content" >
+			    <div class="page__inner-wrap">
+			        <header>
+						<h1 id="-pubs" style="font-size: 2.4rem;">🎙️ Conference Papers</h1>
+						<div class="paper-box"><div class="paper-box-image"><div><div class="badge">ACM MM 2023</div><img src="images/mm23.png" alt="sym" width="100%" /></div></div>
+						<div class="paper-box-text">
+						
+						    <p><a href="https://arxiv.org/abs/2308.02190">Emo-DNA: Emotion Decoupling and Alignment Learning for Cross-Corpus Speech Emotion Recognition</a><br />
+						<strong>Jiaxin Ye</strong>, Yujie Wei, Xin-Cheng Wen, Chenglong Ma, Zhizhong Huang, Kunhong Liu, Hongming Shan<sup>†</sup></p>
+						
+						  </div>
+						</div>
+						
+						<hr />
+						
+						
+						<h2 id="-pubs" style="font-size: 2.4rem;">📚 Journal Papers</h1>
+						
+			        </header>
+			        <footer class="page__meta"></footer>
+			    </div>
+			</article>
+			
+			
+			<article id="services" class="page tab-content" >
+			    <div class="page__inner-wrap">
+			        <header>
+						<h1 id="-servs" style="font-size: 2.4rem;">🤦‍♂️️ Reviewing Experience</h1>
+						<ul>
+							<li>Conference Reviewer of ICASSP 2025, IJCNN 2025.</li>
+							<!-- <li>Journal Reviewer of xxx.</li> -->
+						</ul>
+			        </header>
+			        <footer class="page__meta"></footer>
+			    </div>
+			</article>
+			
+			
         </div>
         <div class="page__footer">
             <footer>

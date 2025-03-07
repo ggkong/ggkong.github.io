@@ -1,0 +1,112 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.paper-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px #efefef solid;
+    padding: 2em 0;
+}
+
+.paper-box-image {
+    display: flex;
+    align-items: center;
+    margin-right: 1em;
+}
+
+.paper-box-image img {
+    max-width: 400px;
+    box-shadow: 3px 3px 6px #787878;
+    object-fit: cover;
+}
+
+.paper-box-text {
+    flex-grow: 1; /* Allow text to take available space */
+    /* Add your Markdown text styles here */
+}
+
+@media screen and (max-width: 768px) {
+    .paper-box {
+        flex-direction: column; /* Stack elements on smaller screens */
+        align-items: flex-start;
+    }
+
+    .paper-box-image {
+        margin-right: 0; /* Reset margin for smaller screens */
+        margin-bottom: 1em;
+    }
+
+    .paper-box-text {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+/* Styles for the badge */
+.badge {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: absolute;
+    margin-top: 0.5em;
+    margin-left: -0.5em;
+    color: white;
+    background-color: #053574;
+    font-size: 0.8em;
+}
+
+/* 自定义样式：在文字中间加入带有动态文字的方块 */
+.pub-box {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; /* 将子元素左对齐 */
+    align-items: flex-start; /* 将子元素顶部对齐 */
+    padding: 0em 0;
+}
+
+
+.ccf-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.1em 0;
+}
+
+.ccf {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    position: absolute;
+    margin-bottom: -0.0em;
+    margin-left: -0.0em;
+    color: white;
+    background-color: #053574;
+    font-size: 0.6em;
+    box-shadow: 3px 3px 6px #787878;
+    font-weight: bold;
+    vertical-align: middle;
+    padding: 0.2em 0.5em; /* 调整方块的内边距 */
+}
+
+
+.pub-box-text {
+    margin-top: 0.8em;
+    flex-grow: 1; /* Allow text to take available space */
+    /* Add your Markdown text styles here */
+}
+
+ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+ol li {
+    margin-bottom: 10px; /* 调整每个 li 之间的底部间隔 */
+}
+
+ol.custom-numbered {
+    list-style-type: decimal; /* 设置列表项的标志为数字 */
+  }
